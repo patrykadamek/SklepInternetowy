@@ -14,6 +14,11 @@ namespace SklepInternetowy.DAL
         {
 
         }
+
+        static KsiazkiContext()
+        {
+            Database.SetInitializer<KsiazkiContext>(new KsiazkiInitializer());
+        }
         public DbSet<Ksiazka> Ksiazki { get; set; }
         public DbSet<Kategoria> Kategorie { get; set; }
         public DbSet<Zamowienie> Zamowienia { get; set; }
